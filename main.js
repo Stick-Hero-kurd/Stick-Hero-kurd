@@ -156,7 +156,9 @@ window.addEventListener("keydown", function (event) {
   }
 });
 
-window.addEventListener("mousedown", function (event) {
+// --- GOHEWRINA JI BO MOBAYLÊ ---
+// Guherandina mousedown bo touchstart
+window.addEventListener("touchstart", function (event) {
   if (phase == "waiting") {
     lastTimestamp = undefined;
     introductionElement.style.opacity = 0;
@@ -165,7 +167,8 @@ window.addEventListener("mousedown", function (event) {
   }
 });
 
-window.addEventListener("mouseup", function (event) {
+// Guherandina mouseup bo touchend
+window.addEventListener("touchend", function (event) {
   if (phase == "stretching") {
     phase = "turning";
   }
